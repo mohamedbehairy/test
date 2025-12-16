@@ -14,11 +14,6 @@ export default function Home() {
   }
   return (
     <div className="my-5 text-st ">
-      {/*$ **************************************** */}
-
-      <Test />
-
-      {/*$ **************************************** */}
       <h2
         className={
           count >= 50
