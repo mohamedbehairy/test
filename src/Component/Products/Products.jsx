@@ -38,7 +38,10 @@ export default function Products() {
         </div>
       ) : (
         <div className="h-screen flex justify-center items-center">
-          <i className="fas fa-spinner fa-spin text-6xl text-blue-600"></i>
+          <div
+            className="h-20 w-20 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] text-blue-500"
+            role="status"
+          ></div>
         </div>
       )}
     </React.Fragment>

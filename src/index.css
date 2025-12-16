@@ -7,8 +7,33 @@
 .btn {
   @apply transition-all duration-350 px-3 py-2 rounded-md cursor-pointer;
 }
+
+/** Styling for NavLink active */
+nav a:not(#logo) {
+  @apply text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300;
+}
+
+nav a.active:not(#logo) {
+  @apply text-blue-500 dark:text-blue-400 font-bold pb-1;
+}
+
 @layer base {
-  * {
-    @apply transition-colors duration-400;
+  body,
+  nav,
+  button,
+  a,
+  div[class*="bg-"],
+  div[class*="text-"] {
+    @apply transition-colors duration-300;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    transition: none !important;
   }
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar({ mode, changeMode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,9 @@ export default function Navbar({ mode, changeMode }) {
           <div className="left flex items-center">
             <div className="logo sm:order-first order-last">
               <h1 className="text-2xl font-bold">
-                <NavLink to={""}>Moon</NavLink>
+                <NavLink id="logo" to={""}>
+                  Moon
+                </NavLink>
               </h1>
             </div>
             <div className="links lg:ml-24 md:ml-15 ml-5">
@@ -84,7 +86,7 @@ export default function Navbar({ mode, changeMode }) {
                 Sign up
               </button>
             </div>
-            <div className="icon-mode cursor-pointer self-center text-gray-950 bg-slate-300 hover:bg-slate-400 dark:bg-slate-600 dark:hover:bg-slate-400 dark:text-amber-50 dark:hover:text-gray-800 p-2 rounded-full transition-all duration-350">
+            <div className="icon-mode cursor-pointer self-center text-gray-950 bg-slate-300 hover:bg-slate-400 dark:bg-slate-600 dark:hover:bg-slate-400 dark:text-amber-50 dark:hover:text-gray-800 p-2 rounded-full transition-all duration-350 select-none">
               {mode == "dark" ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
