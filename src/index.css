@@ -24,7 +24,8 @@ nav a.active:not(#logo) {
   a,
   div[class*="bg-"],
   div[class*="text-"] {
-    @apply transition-colors duration-300;
+    @apply transition-colors duration-300 select-none;
+    
   }
 
   h1,

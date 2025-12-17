@@ -12,7 +12,7 @@ export default function Layout() {
     <main className={`${mode == "dark" && "dark"} `}>
       <div className="bg-slate-300 dark:bg-slate-800 min-h-screen relative">
         <Navbar mode={mode} changeMode={changeMode} />
-        <div className="mb-10">
+        <div className="mb-10 pt-17">
           <Outlet></Outlet>
         </div>
         <Footer />

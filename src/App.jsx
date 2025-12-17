@@ -7,6 +7,7 @@ import NotFound from "./Component/NotFound/NotFound.jsx";
 import Parent from "./Component/Parent/Parent.jsx";
 import Products from "./Component/Products/Products.jsx";
 import "./index.css";
+import ToDoLists from "./Component/ToDoLists/ToDoLists.jsx";
 
 const routers = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const routers = createBrowserRouter([
       { path: "/parent", element: <Parent /> },
       { path: "/about", element: <About /> },
       { path: "/gallery", element: <Gallery /> },
+      { path: "/toDoLists", element: <ToDoLists /> },
       { path: "*", element: <NotFound /> },
     ],
   },

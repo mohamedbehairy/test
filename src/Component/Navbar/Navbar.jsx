@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import ToDoLists from "../ToDoLists/ToDoLists";
 
 export default function Navbar({ mode, changeMode }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className="shadow-2xl px-5 py-3 bg-slate-100 dark:bg-slate-900 dark:text-slate-50 ">
+      <nav className="shadow-2xl px-5 py-3 bg-slate-100 dark:bg-slate-900 dark:text-slate-50 fixed top-0 left-0 right-0">
         <div className="container flex justify-between">
           <div className="left flex items-center">
             <div className="logo sm:order-first order-last">
@@ -55,6 +56,16 @@ export default function Navbar({ mode, changeMode }) {
                     to={"/gallery"}
                   >
                     Gallery
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    onClick={() => {
+                      setIsOpen(!isOpen);
+                    }}
+                    to={"/toDoLists"}
+                  >
+                    ToDoLists
                   </NavLink>
                 </li>
               </ul>
@@ -167,6 +178,16 @@ export default function Navbar({ mode, changeMode }) {
                 to={"/gallery"}
               >
                 Gallery
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
+                to={"/toDoLists"}
+              >
+                ToDoLists
               </NavLink>
             </li>
 
